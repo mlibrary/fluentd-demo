@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# gem "rails"
+
+gem "pry", "~> 0.14.2"
+
+gem "fluent-logger-ruby", "~> 9001.0"
+
+gem "fluent-logger", "~> 0.9.0"

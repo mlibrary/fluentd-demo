@@ -1,0 +1,4 @@
+1_write_logs_to_a_file/file/example.log
+1_write_logs_to_a_file/output/*
+
+!*.keep

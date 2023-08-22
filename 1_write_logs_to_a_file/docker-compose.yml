@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  fluentd:
+    image: fluent/fluentd:edge
+    user: root
+    volumes:
+    - ./config:/fluentd/etc/
+    - ./file:/fluentd/log/files/
+    - ./output:/output/
+
+  app:
+    image: alpine
+    volumes:
+      - ./file:/app
+    command: [ "/bin/sh", "-c", "chmod +x /app/app.sh && ./app/app.sh" ]
