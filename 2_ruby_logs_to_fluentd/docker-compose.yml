@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  fluentd:
+    image: fluent/fluentd:edge
+    user: root
+    volumes:
+    - ./config:/fluentd/etc/
+    - ./app:/fluentd/log/files/
+    - ./output:/output/
+
+  app:
+    build: ./app/.
+    volumes:
+      - ./app:/app
+    command: [ "bundle", "exec", "ruby", "./app.rb" ]

@@ -1,4 +1,5 @@
 1_write_logs_to_a_file/app/app.log
 1_write_logs_to_a_file/output/*
+2_ruby_logs_to_fluentd/output/*
 
 !*.keep
